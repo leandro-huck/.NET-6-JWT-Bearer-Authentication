@@ -25,7 +25,7 @@ namespace SecureClient
 
             string[] ResourceIds = new string[] { config.ResourceId };
 
-            AuthenticationResult result = null;
+            AuthenticationResult? result = null;
 
             try
             {
@@ -49,7 +49,7 @@ namespace SecureClient
                 Console.ResetColor();
             }
 
-            if (!string.IsNullOrEmpty(result.AccessToken))
+            if (result != null && !string.IsNullOrEmpty(result.AccessToken))
             {
                 // Create HTTP client with default request header
                 var httpClient = new HttpClient();

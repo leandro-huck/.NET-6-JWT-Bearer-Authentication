@@ -4,6 +4,15 @@ namespace SecureClient
 {
     public class AuthConfig
     {
+        public AuthConfig()
+        {
+            Instance = "";
+            ClientId = "";
+            TenantId = "";
+            ClientSecret = "";
+            BaseAddress = "";
+            ResourceId = "";
+        }
         public string Instance { get; set; }
         public string ClientId { get; set; }
         public string TenantId { get; set; }
